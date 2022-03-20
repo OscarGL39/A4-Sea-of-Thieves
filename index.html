@@ -11,6 +11,40 @@
     <!-- Enlace a la hoja de estilos -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
 
 <body>
     <div id="header" class="flex">
@@ -19,30 +53,60 @@
     <!--Contenido principal -->
     <div id="main">
         <h1>Sea of thieves</h1>
-        <p><a href="https://www.youtube.com/c/SeaofThieves">Sea of thieves</a>, SEA OF THIEVES ES TU PASAPORTE DE ENTRADA A LA VIDA PIRATA QUE SIEMPRE HAS DESEADO TENER. PREPÁRATE PARA UN MUNDO DE AVENTURAS, EMOCIÓN Y DESCUBRIMIENTOS CON UNAS AGUAS REPLETAS
-            DE MONTONES DE JUGADORES. TIENES A TU ALCANCE TODO LO QUE TE HACE FALTA PARA SURCAR SUS AGUAS, ASÍ QUE TÚ DECIDES DÓNDE QUIERES IR. DISFRUTA DE HISTORIAS EMOCIONANTES, PELIGROSAS CRIATURAS MARINAS Y MONTONES DE TESOROS OCULTOS QUE TE AYUDARÁN
-            A LABRAR TU PROPIA LEYENDA PIRATA.</p>
+        <p><a href="https://www.youtube.com/c/SeaofThieves">Sea of thieves</a>, sea of thieves es tu pasaporte de entrada a la vida pirata que siempre has deseado tener. prepárate para un mundo de aventuras, emoción y descubrimientos con unas aguas repletas
+            de montones de jugadores. tienes a tu alcance todo lo que te hace falta para surcar sus aguas, así que tú decides dónde quieres ir. disfruta de historias emocionantes, peligrosas criaturas marinas y montones de tesoros ocultos que te ayudarán
+            a labrar tu propia leyenda pirata.
+        </p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/r5JIBaasuE8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <h2>Una escena post-créditos relativa</h2>
-        <p>La respuesta es que no hay una escena propiamente dicha después de los créditos, pero sí hay algo, un easter egg. Si tienes curiosidad, querrás quedarte hasta el final. A diferencia de Marvel, que casi siempre tiene al menos una escena durante
-            o después de los créditos de sus películas que dan pistas de lo que está por venir. Aquí el clip adicional al final está lejos de lo que normalmente esperaríamos. No es una escena rodada que presenta personajes en pantalla. Si tras casi tres
-            horas de película quieres descubrirlo, es cosa tuya, si quieres saberlo, sigue leyendo.</p>
-        <h2 id="spoiler">SPOILERS DE LA ESCENA POST-CRÉDITOS DE THE BATMAN</h2>
-        <p>Con bajas expectativas el clip posterior a los créditos de 'The Batman' es divertido a su modo, no importa en términos de lo que significa para una posible secuela, aunque ahora ya sabemos que Matt Reeves confirmó que ha estado en conversaciones
-            para 'The Batman 2', lo que tenemos es una especie de broma que da al público la oportunidad de interactuar con la historia después de salir del cine. En primer lugar aparece solamente una línea de conversación que dice: GOOD BYE (Adiós),
-            como si fuera una conversación de chat con Enigma y este nos despide al salir del cine.</p>
-        <img class="img1" src="img/img_1.jpeg" alt="Good Bye?">
-        <p>Hasta ese momento, es un guiño sin importancia a la película, dado que ese tipo de conexión misteriosa y creepy con el asesino es parte de la trama, pero si prestamos atención a la pantalla, porque el clip es corto y rápido, hay un pequeño flash
-            que nos deja ver una imagen casi subliminal que nos muestra una web.</p>
-        <img class="img2" src="img/img_2.jpeg" alt="Error">
-        <h2>Un juego con recompensa</h2>
-        <p>Lo divertido es que si vamos a la web
-            <a href="www.rataalada.com">www.rataalada.com</a> nos encontramos con el chat que se encuentra Batman, y nos propone unos cuantos acertijos. La web es también una broma interna de la película puesto que la pista de "el rata alada" es uno de
-            los momentos más divertidos de la película, casi una broma de traductores con la que El pingüino se ríe de Gordon y Batman.</p>
-        <img class="img3" src="img/img_3.jpeg" alt="Error">
+        <h2>ACCIÓN Y EMOCIÓN</h2>
+        <p>Sea of Thieves es un mundo repleto de peligro y emoción por igual, independientemente de si te preparas para enfrentarte a una horda de esqueletos malditos sable en mano, de si estás en mitad de una batalla naval contra otro barco pirata o de si intentas esquivar trampas mortales en busca de una cripta subterránea.</p>
+        <img class="img4" src="img/img1.jpg" alt="Errorimg">
+        <h2 id="spoiler">EXPLORA Y HAZ DESCUBRIMIENTOS</h2>
+        <p>Te esperan unas aguas repletas de islas preciosas, asentamientos y cuevas hundidas por explorar, secretos por descubrir y tesoros que agenciarte por el camino. Este mundo cambiante, su clima, los eventos especiales y los encontronazos que tengas con otras tripulaciones garantizarán que tus aventuras nunca serán iguales.</p>
+        <img class="img1" src="img/img2.jpg" alt="ErrorImg">
+        <p>Sea of Thieves anima a sus jugadores a elegir un punto en el horizonte y que no paren hasta descubrir todos sus secretos. No importa si ese punto es el pasaje subterráneo más profundo o el pico más alto de una isla.</p>
+        <h2>ÚNETE A LA TRIPULACIÓN</h2>
+        <p>Sea of Thieves cuenta con una de las comunidades de jugadores más acogedoras del mundo de los videojuegos, integrada por dos millones de usuarios activos. Además, el juego dispone de foros con buen rollo y mogollón de recursos para sus seguidores, piratas que buscan tripulación y streamers.</p>
+        <img class="img3" src="img/img3.jpg" alt="Error">
         <p>La web tiene varios acertijos que nos pregunta un misterioso personaje que se supone que es el villano de la película, pero sus preguntas son bastante complejas y resolverlas no es tan fácil como parece, y si fallas te intenta poner nervioso,
             hasta que decide darte una nueva oportunidad y plantea nuevas preguntas.</p>
+        <h2>Tipos de Barcos</h2>
+        
     </div>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/barco1.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/barco2.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/barco3.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
     <!-- footer -->
     <div id="footer">
         <p>👨🏽‍💻 @Sea of thieves</p>
