@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
 body {
     margin: 0.5;
     font-family: 'Seaweed Script', cursive;
@@ -14,6 +15,7 @@ body {
     background-image: url('../img/Encabezado.jpg');
     background-position: center;
     background-size: cover;
+    font-family: 'Walter Turncoat', cursive;
 }
 
 #header h1 {
